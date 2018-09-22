@@ -31,6 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Git commands
 `git init`
+`git config user.email "sanjays30@gmail.com"`
 `git add .`
 `git commit -m "First commit"`
 `git pull --rebase origin master`
