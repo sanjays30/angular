@@ -1,0 +1,113 @@
+<mat-toolbar id="toptoolbar" role="heading">
+    <div fxHide.gt-md> <button mat-icon-button (click)="onClose()">
+            <mat-icon> menu</mat-icon>
+        </button></div>
+
+    <div class="logo"> <a routerLink="/">
+            <button mat-icon-button>
+                <mat-icon>pool</mat-icon>
+            </button>5kFitness</a>
+    </div>
+    <div class="divider_vertical"></div>
+    <div class="menu_icon_right_border"> <button mat-icon-button>
+            <mat-icon>view_quilt</mat-icon>
+        </button>
+    </div>
+    <div class="menu_icon_right_border"> <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>apps</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item [matMenuTriggerFor]="eocmenu">
+                <mat-icon>next_week</mat-icon>
+                <span>Lorem Ipsum Lorem Ipsum</span>
+            </button>
+            <button mat-menu-item [matMenuTriggerFor]="ppamenu">
+                <mat-icon>next_week</mat-icon>
+                <span>Lorem Ipsum Lorem Ipsum</span>
+            </button>
+            <button mat-menu-item [matMenuTriggerFor]="ppsmenu">
+                <mat-icon>settings_applications</mat-icon>
+                <span>Lorem Ipsum</span>
+            </button>
+            <button mat-menu-item [matMenuTriggerFor]="smmenu">
+                <mat-icon>settings</mat-icon>
+                <span>Lorem IpsumLorem Ipsum</span>
+            </button>
+        </mat-menu>
+        <mat-menu #eocmenu="matMenu">
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+        </mat-menu>
+        <mat-menu #ppamenu="matMenu">
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+        </mat-menu>
+        <mat-menu #ppsmenu="matMenu">
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+        </mat-menu>
+        <mat-menu #smmenu="matMenu">
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+            <button mat-menu-item>Lorem Ipsum Lorem Ipsum</button>
+        </mat-menu>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs></div>
+    <!--
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+            <li>
+                <a routerLink="/signup">Signup</a>
+            </li>
+            <li>
+                <a routerLink="/login">Login</a>
+            </li>
+            <li>
+                <a routerLink="/training">Train</a>
+            </li>
+            <li>
+                <a routerLink="/login">Logout</a>
+            </li>
+        </ul>
+    </div> -->
+    <div class="menu_icon_left_border"> <button mat-icon-button>
+            <mat-icon>notifications</mat-icon>
+        </button>
+    </div>
+    <div class="menu_icon_left_border"> <button mat-icon-button>
+            <mat-icon>help</mat-icon>
+        </button>
+    </div>
+    <div class="menu_icon_left_border">
+        <button mat-icon-button [matMenuTriggerFor]="menu2">
+            <mat-icon>person</mat-icon>
+        </button>
+        <mat-menu #menu2="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item>
+                <mat-icon>account_box</mat-icon>
+                <span>Sanjay Admin</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>info</mat-icon>
+                <span>About</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Logout</span>
+            </button>
+        </mat-menu>
+    </div>
+    
+    <button mat-icon-button [matMenuTriggerFor]="menu3">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu3="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item routerLink="/training" *ngIf="isAuth">Train</button>
+        <button mat-menu-item routerLink="/signup" *ngIf="!isAuth"> Signup</button>
+        <button mat-menu-item routerLink="/login" *ngIf="!isAuth">Login</button>
+        <button mat-menu-item (click)="logoutNow()" *ngIf="isAuth">Logout</button>
+    </mat-menu>
+</mat-toolbar>
