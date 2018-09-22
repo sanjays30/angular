@@ -29,3 +29,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## to generate component
 `ng g c auth/signup --module app.module`
 
+## Git commands
+`git init`
+`git add .`
+`git commit -m "First commit"`
+`git pull --rebase origin master`
+`git remote add origin https://github.com/sanjays30/angular.git`
+`git remote -v`
+`git push origin master`
